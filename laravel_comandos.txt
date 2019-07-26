@@ -1,0 +1,104 @@
+iniciar comporser:
+1 nos dirigimos en el cmd a la direccion que tenemos ubicado el proyecto. Ejemplo = c:/wamp64/www/myproyecto
+2 composer create-project laravel/laravel mi-proyecto-laravel
+
+php artisan make:auth||Crear un login provicional el laravel
+
+ejecutar migraciones: 
+
+1:  php artisan
+2:  Crear una nueva migracion: php artisan make:migration nombre_migrations
+3:  si queremos que cree de una vez la tabla agregamos a 2:  --create=nombre_tabla 
+4:  php artisan migrate -- Ejecutamos las migraciones creadas
+5:  actualizar migraciones ya realizadas hay dos formas
+		Primer forma
+		5.1: php artisan migrate:reset (este comando regresa todas la migraciones ya creadas, en otden inverso);
+		5.2: php artisan migrate: (Ya podemos volver a ejecutar las tablas)
+		Segunda forma
+		5.1: php artisan migrate:reset (este comando primero ejecuta el reset y luego el migrate)
+	
+		El problema es que elimina toda la informacion.
+	
+		Si ya tenemos un proyecto con informacion es mejor agregar una nueva migracion:
+		5.1 php artisan make:migrate add_nombre-del-campo_to_la-table
+	
+6:  Crear modelo y migrar a la vez:
+		1: php artisan make:model nombre_modelo -m
+		Los modelos se guardan en la carpeta app
+		El nombre_modelo tiene que ir como el nombre de la tabla en forma singular
+7:  si creamos ya la tabla podemos luego el modelo con el paso 6 unicamente se le quita el comando -m
+	
+
+8:   Creacion de RUTAS
+	 Se encuentra en Http/routest.php
+	 Route::get()
+9   Creacion de controlladores: fuciona toda la logica de negocios
+	se encutnra en app/http/controller
+	1: php artisan make:controller nombre_controllador: crear el controllador
+
+10: Vistas 
+	listar rutas: php artisan route:list
+	se encuentra en resources/views
+	
+8:  ORM Objet relaciona mapet
+
+	agregar migracion a base de datos: php artisan migrate
+	dd($values["active"]);
+
+php artisan make:migration rename_rate_type_admin_to_rate_type_admin;
+
+
+php artisan make:migration   create_rate_type_admin_table             						      TIPO DE TASA
+php artisan make:migracion   create_payment_frequency_table  --create=payment_frequency			 FRECUENCIA PAGO
+php artisan make:migration  create_service_table             --create=service                       		SERVICIO
+php artisan make:migration  create_customer_type_table       --create=customer_type 				 TPO DE CLINETE
+php artisan make:migration  credit_destination_table         --create=credit_destination           	DESTINOS DE CREDITO
+
+php artisan make:model Service -m 
+php artisan make:model CustomerType -m 
+php artisan make:model CreditDestination -m 
+
+CONTROLADOR -> VIZSTAR Y RUTAS
+
+
+ALTER TABLE payments_transactions 
+	ADD COLUMN sent boolean NOT NULL DEFAULT false;
+
+	php artisan route:list
+	sara bernara
+
+--LIMPIAR CACHE
+	php artisan cache:clear
+	php artisan route:cache
+	php artisan config:cache 
+
+-- php artisan migrate:refresh: borra y crea las tablas
+-- php artisan migrate: crea tablas
+	
+---LARAVEL SPATIE
+	1 Spatie
+	   1.1 CREAR PROYECTO:  roles_permisos
+	   2.2 AGREGAR PAQUETE: composer require spatie/laravel-permission
+	   3.3 REGISTRAR PROVIDER: Spatie\Permission\PermissionServiceProvider::class,
+	   4.4 PUBLICAMOS MIGRACIONES: php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider" --tag="migrations"
+	   5.5 EN Users: use Spatie\Permission\Traits\HasRoles; use HasRoles;
+	   6.6 php artisan migrate
+	   7.7 CREAR SEEDER: php artisan make:seeder RolesAndPermission
+	   8.8 php artisan db:seed
+	2 Login
+		1.1 php artisan make:auth
+		
+/*
+    Metodos
+		GET = html
+		POST = html
+		PUT = Actualiza un registro completamente
+		PATCH = Actualiza algunos o parte del registro
+		DELETE
+		OPTIONS = Ver la comunicacion de metadata
+	COMENTARIO: 
+		cuando es post ponemos en el formulario que se emulara el metodo put
+	Formas adicionales de comunicacion
+		MATCH
+		ANY
+*/

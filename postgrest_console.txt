@@ -1,0 +1,4 @@
+IMPORTAR CMD
+valus a la direccion donde se encuentre psql.exe
+
+C:\Program Files\PostgreSQL\9.5\bin>psql.exe -U postgres genesis_16052019 < F:/efectivoprod_16052019.sql

@@ -1,0 +1,34 @@
+https://www.techomoro.com/how-to-install-and-setup-react-native-on-windows-10/
+
+Instalar react:
+	npm install -g react-native-cli
+
+Crear proyecto:
+	react-native init AwesomeProject
+	
+Empezar a ejecutar desde el telefono:
+	1 en la ubicacion del proyecto corremos el servidor de JS escribiendo: yarn start
+	2 En la ublicacion del proyecto pero en otro consola ejectumos: react-native run-android
+	
+Cuando ya tenemos un proyecto y solo lo clonamos empezamos haciendo
+yarn install
+nmp install
+
+
+just run this from root of your project with cmd:
+	cd android && gradlew clean
+	
+You can run the following command at your project's root folder
+
+1. You need to delete both ios,android and node module folder. Run the following commands
+2. > npm install //to get the node module folder
+3. > react-native upgrade //to get android and ios folder
+4. > react-native link // for linking the libraries
+5. > react-native run android/ios
+
+
+"react-native upgrade" solved my problem.
+
+GENERAR APK 
+	WINDOWS : gradlew assembleRelease
+	LINUX : cd android && ./gradlew assembleRelease

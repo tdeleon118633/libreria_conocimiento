@@ -1,0 +1,30 @@
+GIT = Sistema de control de versiones
+
+Los tres estados:
+
+Working directory
+Aqui es donde editamos y trabajamos con nuestros proyectos
+
+Staging area
+Aqui es donde escogemos que archivos que estan listos para 
+pasar al tercer estado, al igual que decimos que archivos 
+no estan listos por el momento
+
+Repository
+Aqui es el registro de todo nuestro proyecto
+
+git config --global --add color.ui true: Comandos para configurar color basico
+git config --global --list:               Comando para ver nuestra configuracion
+git init: comando que marca el inicio de nustro proyecto, le decimos a git que 
+		  empiece a monitoreas todosnuestro cambios(Se inicia solo una vez al 
+		  comenzar un proyecto)
+git status: muestra el estado del proyecto.
+git add: agrega archivos que ya esten listo.
+git commit -m "Mensaje"
+git log: muestra todos los nuevoscommit con su respectiva informacion
+git checkout: Con este commando viajamos a travez de nuestro commit o nuestras ramas.
+git checkout "codigo sha": nos lleva a el commit que hicimos
+
+git config --local usert.email "correo": configura el coreo para el repositorio local. Osea 
+                                         en el que estamos posicionado.
+

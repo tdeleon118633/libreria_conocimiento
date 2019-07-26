@@ -1,0 +1,8 @@
+IMPORTAR CMD
+mysql -u root -p nombre_bd < bd.sql
+EXPORTAR
+mysql -u root -p nombre_bd > bd.sql
+
+show procedure status;
+
+UPDATE `mysql`.`proc` p SET definer = 'YournewDefiner' WHERE definer='OldDefinerShownBefore'

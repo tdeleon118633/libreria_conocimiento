@@ -1,0 +1,29 @@
+/*
+	CODIGO COMPILADO
+	CURSO BASE DE DATOS
+*/
+-- 1 video Comceptos basicos
+   BASE DE DATOS -> Coleccion de datos relacionados
+  
+-- COMPONENTES EN BD
+
+	CAMPO -> area en donde se almacenan datos de un mismo tipo
+	REGISTRO -> Coleccion de datos iguales que esten relacionados
+	ARCHIVO -> Es una coleccion de registro almacenados
+	
+-- 2 video Modelo Relacional/Diagrama entidad relacion
+	MODELO DE BASE DE DATOS-> Conjunto de ideas logicas utilizadas para representar la estructura de la bds.
+	MODELO RELACIONAL-> Permite visualizar la estructura de una bd y las relaciones entre los datos modelar=Formar/Construir
+	DIAGRAMA ENTIDAD RELACION-> Herramienta para modelar nuestra base de datos y analizarla
+	
+-- ELEMENTO DEL DIAGRAMA ENTIDAD RELACION(EER)-
+	TRIANGULO -> Entidad -> Objeto concreto a abstracto que figura en nuestra bd como: alumno, cliente, empresa,alergia
+	ROMBO -> Relacion -> Relacion entre enteidades, tambien llamado mapeo o cardinalidad
+	LINEA -> Union entre entidades
+	OVALO VACION -> Atributo -> Caracteristica de una entidad como: nombre, edad, fecha
+	OVALO LLENO -> Atributo principal o clave primaria
+	OVALO RELLENO A LA MITAD -> Atribuno foraneo o clave secundaria
+	
+-- 3 video Cardinalidad / Mapeo
+		
+	

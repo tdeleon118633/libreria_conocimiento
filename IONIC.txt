@@ -1,0 +1,32 @@
+- LARAVEL
+- POSTGRES
+- ionic
+    - ionic = Css por defecto Y Cordoba = persite programar en JS y HTML
+	- Queremos la plicacion en IOS y Androi
+	  Para ello se ayuda de Cordoba.
+	  CORDOBA: Codigo libre, acceder a camara, y componentes del celular. 
+	  
+	  CODIGO -> IONIC(Interprete) -> Cordoba/WEB(hace el trabajo pezado que traduce js simple a )  -> IOS/ANDROI
+
+- HERRAMIENTAS:
+		Editor de texto: Brackets, sublime, etc
+		Herramienta de desarrolo para emular dispositivo movil: GOOGLE  O Emulador de IOS
+		nodejs: Requerido para consola de IONIC
+		- nodejs
+			ES UNA PLATAFORMA jS BASADA EN BOBLE V8(C++).
+			OpenSource, C++, Enbebido, Manipulable.
+			Front-End = Usuario. HTML, CSS, Angular, js.
+			Back-End = Logica
+		-CARACTERISTICAS: Sinble Thread = un unico hilo.
+		-Concurrente: Modelo concurrente. varias operaciones en simultaneo no al mismo tiempo
+		-Ejecucion de callbacks(varias aciones). 
+- ISSTALACION
+	 1 npm -v
+	 2 npm install -g ionic cordova
+	   si saliera un error de permiso paso 3
+	 3 - sudo  npm install -g ionic cordova
+	  - COMANDOS UTILES
+	   ionic info
+- CREANDO PRIMERA APP
+    1 navega a la capena
+	2 ionic start demoapp tabs
